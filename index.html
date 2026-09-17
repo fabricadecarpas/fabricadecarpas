@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fábrica de Carpas Bogotá | Carpas Industriales y Membranas Arquitectónicas</title>
-    <meta name="description" content="Fabricación, diseño e instalación de carpas industriales, hangares, bodegas temporales y membranas arquitectónicas en Bogotá y toda Colombia. Calidad y resistencia garantizada.">
-    <meta name="keywords" content="carpas industriales bogota, fabrica de carpas, membranas arquitectónicas, hangares temporales, bodegas de lona bogota">
+    <title>Fábrica de Carpas Bogotá | Carpas Industriales, Membranas, Toldos y Pérgolas</title>
+    <meta name="description" content="Fabricación, diseño e instalación de carpas industriales, hangares, bodegas temporales, membranas arquitectónicas, toldos y pérgolas en Bogotá y toda Colombia. Calidad y resistencia garantizada.">
+    <meta name="keywords" content="carpas industriales bogota, fabrica de carpas, membranas arquitectónicas, hangares temporales, bodegas de lona bogota, toldos, pergolas">
     <style>
         * {
             margin: 0;
@@ -30,7 +30,7 @@
             z-index: 100;
         }
         header h1 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #f39c12;
         }
         nav a {
@@ -40,7 +40,7 @@
             font-weight: 500;
         }
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80');
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -54,7 +54,7 @@
         .hero p {
             font-size: 1.2rem;
             max-width: 800px;
-            margin: 0 auto 30px;
+            margin: 0 auto 20px;
         }
         .phone-highlight {
             font-size: 1.4rem;
@@ -72,37 +72,66 @@
             border-radius: 5px;
             font-size: 1.2rem;
             display: inline-block;
-            transition: background 0.3s;
         }
-        .btn:hover {
-            background-color: #128c7e;
-        }
-        .services {
+
+        /* Sección Galería / Catálogo */
+        .gallery-section {
             padding: 60px 5%;
             max-width: 1200px;
             margin: 0 auto;
         }
-        .services h2 {
+        .gallery-section h2 {
             text-align: center;
             font-size: 2.2rem;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
             color: #1a252f;
+        }
+        .gallery-section p.subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
         .card {
             background: white;
-            padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
-        .card h3 {
-            color: #f39c12;
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h3 {
+            color: #1a252f;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        .card-content p {
+            font-size: 0.95rem;
+            color: #555;
             margin-bottom: 15px;
         }
+        .card-btn {
+            display: inline-block;
+            color: #25d366;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
         footer {
             background-color: #1a252f;
             color: white;
@@ -115,7 +144,7 @@
             font-weight: bold;
         }
 
-        /* Botón Flotante Titilante de WhatsApp (Más Grande y Fijo) */
+        /* Botón Flotante Titilante de WhatsApp */
         .whatsapp-float {
             position: fixed;
             width: 75px;
@@ -135,24 +164,10 @@
             animation: pulse-whatsapp 1.8s infinite;
         }
 
-        /* Animación de pulso/titileo */
         @keyframes pulse-whatsapp {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-            70% {
-                transform: scale(1.1);
-                box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
-            }
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
-        }
-
-        .whatsapp-float:hover {
-            background-color: #128c7e;
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
     </style>
 </head>
@@ -161,32 +176,66 @@
     <header>
         <h1>Fábrica de Carpas Bogotá</h1>
         <nav>
-            <a href="#servicios">Servicios</a>
+            <a href="#catalogo">Catálogo</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h2>Soluciones de Cubrimiento e Infraestructura Industrial</h2>
-        <p>Especialistas en fabricación, montaje y diseño de carpas industriales, bodegas temporales, hangares y membranas arquitectónicas en Bogotá y Colombia.</p>
-        <span class="phone-highlight">Llámanos o escríbenos: +57 314 2035325</span>
-        <a href="https://wa.me/573142035325?text=Hola,%20quiero%20solicitar%20una%20cotización" class="btn" target="_blank">Cotizar por WhatsApp (+57 314 2035325)</a>
+        <h2>Fabricación e Instalación de Carpas y Cubrimientos</h2>
+        <p>Soluciones industriales, comerciales y arquitectónicas a medida en Bogotá y toda Colombia.</p>
+        <span class="phone-highlight">Línea Directa y WhatsApp: +57 314 2035325</span>
+        <a href="https://wa.me/573142035325?text=Hola,%20quiero%20solicitar%20una%20cotización" class="btn" target="_blank">Cotizar por WhatsApp</a>
     </section>
 
-    <section class="services" id="servicios">
-        <h2>Nuestros Servicios</h2>
+    <section class="gallery-section" id="catalogo">
+        <h2>Nuestros Productos y Soluciones</h2>
+        <p class="subtitle">Estructuras diseñadas con materiales de alta resistencia e impermeabilidad</p>
+
         <div class="grid">
             <div class="card">
-                <h3>Carpas Industriales y Bodegas</h3>
-                <p>Estructuras modulares de alta resistencia ideadas para almacenamiento temporal o permanente de mercancías y procesos industriales.</p>
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Carpas Industriales y Bodegas de Lona">
+                <div class="card-content">
+                    <h3>Carpas Industriales</h3>
+                    <p>Bodegas temporales y hangares de gran escala fabricados con lona impermeabilizada y estructuras de acero para almacenamiento masivo.</p>
+                    <a href="https://wa.me/573142035325?text=Cotizar%20Carpa%20Industrial" class="card-btn" target="_blank">Cotizar opción →</a>
+                </div>
             </div>
+
             <div class="card">
-                <h3>Membranas Arquitectónicas</h3>
-                <p>Diseños tensados vanguardistas que combinan estética, protección UV e impermeabilidad para espacios comerciales y públicos.</p>
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Membranas Arquitectónicas y Tensoestructuras">
+                <div class="card-content">
+                    <h3>Membranas Arquitectónicas</h3>
+                    <p>Cubiertas tensadas de diseño vanguardista con protección UV para plazoletas, centros comerciales y espacios corporativos.</p>
+                    <a href="https://wa.me/573142035325?text=Cotizar%20Membrana%20Arquitectonica" class="card-btn" target="_blank">Cotizar opción →</a>
+                </div>
             </div>
+
             <div class="card">
-                <h3>Hangares y Estructuras Especiales</h3>
-                <p>Cubrimientos de grandes luces sin columnas intermedias, fabricados con acero galvanizado y lona de alta durabilidad.</p>
+                <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" alt="Carpas Bogotá para Eventos y Logística">
+                <div class="card-content">
+                    <h3>Carpas Bogotá (Eventos)</h3>
+                    <p>Estructuras modulares tipo hangar o piramidal ideales para eventos masivos, ferias comerciales y logística temporal en Bogotá.</p>
+                    <a href="https://wa.me/573142035325?text=Cotizar%20Carpa%20Eventos" class="card-btn" target="_blank">Cotizar opción →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Toldos Retráctiles y Comerciales">
+                <div class="card-content">
+                    <h3>Toldos Comerciales</h3>
+                    <p>Toldos fijos y retráctiles para fachadas de comercios, restaurantes y residencias. Protección solar e impermeable elegante.</p>
+                    <a href="https://wa.me/573142035325?text=Cotizar%20Toldos" class="card-btn" target="_blank">Cotizar opción →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Pérgolas con Cubiertas Textiles">
+                <div class="card-content">
+                    <h3>Pérgolas y Cubiertas</h3>
+                    <p>Estructuras fijas en aluminio o madera con sistemas de cubiertas de lona o policarbonato para terrazas y patios.</p>
+                    <a href="https://wa.me/573142035325?text=Cotizar%20Pergola" class="card-btn" target="_blank">Cotizar opción →</a>
+                </div>
             </div>
         </div>
     </section>
@@ -199,7 +248,7 @@
         <p style="font-size: 0.8rem; color: #888;">© 2026 Fábrica de Carpas Bogotá. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Botón Flotante de WhatsApp Titilante (Permanente) -->
+    <!-- Botón Flotante de WhatsApp Titilante -->
     <a href="https://wa.me/573142035325?text=Hola,%20estoy%20interesado%20en%20sus%20servicios" class="whatsapp-float" target="_blank" aria-label="Chatear por WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="#ffffff">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
