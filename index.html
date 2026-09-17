@@ -5,170 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fábrica de Carpas Bogotá | Carpas Industriales, Membranas, Toldos y Pérgolas</title>
     <meta name="description" content="Fabricación, diseño e instalación de carpas industriales, hangares, bodegas temporales, membranas arquitectónicas, toldos y pérgolas en Bogotá.">
-    <meta name="keywords" content="carpas industriales bogota, fabrica de carpas, membranas arquitectónicas, hangares temporales, bodegas de lona bogota, toldos, pergolas">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            color: #333;
-            line-height: 1.6;
-            background-color: #f8f9fa;
-        }
-        header {
-            background-color: #1a252f;
-            color: white;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        header h1 {
-            font-size: 1.4rem;
-            color: #f39c12;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 500;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: #333; line-height: 1.6; background-color: #f8f9fa; }
+        header { background-color: #1a252f; color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        header h1 { font-size: 1.4rem; color: #f39c12; }
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
+        
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('carpa-industrial.jpg');
+            background: linear-gradient(rgba(26,37,47,0.85), rgba(26,37,47,0.85)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400"><rect width="800" height="400" fill="%231a252f"/><path d="M100 300 L250 150 L400 300 Z M380 300 L500 180 L620 300 Z M600 300 L680 220 L760 300 Z" stroke="%23f39c12" stroke-width="4" fill="none"/></svg>');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 100px 5% 80px;
+            padding: 90px 5% 70px;
             text-align: center;
         }
-        .hero h2 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 20px;
-        }
-        .phone-highlight {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: #25d366;
-            margin-bottom: 20px;
-            display: block;
-        }
-        .btn {
-            background-color: #25d366;
-            color: white;
-            padding: 14px 32px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            display: inline-block;
-        }
+        .hero h2 { font-size: 2.6rem; margin-bottom: 15px; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 20px; }
+        .phone-highlight { font-size: 1.5rem; font-weight: bold; color: #25d366; margin-bottom: 20px; display: block; }
+        .btn { background-color: #25d366; color: white; padding: 14px 32px; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 1.2rem; display: inline-block; }
 
-        /* Sección Galería / Catálogo */
-        .gallery-section {
-            padding: 60px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .gallery-section h2 {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            color: #1a252f;
-        }
-        .gallery-section p.subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 40px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-        .card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-        }
-        .card-content {
-            padding: 20px;
-        }
-        .card-content h3 {
-            color: #1a252f;
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-        }
-        .card-content p {
-            font-size: 0.95rem;
-            color: #555;
-            margin-bottom: 15px;
-        }
-        .card-btn {
-            display: inline-block;
-            color: #25d366;
-            font-weight: bold;
-            text-decoration: none;
-        }
+        .gallery-section { padding: 50px 5%; max-width: 1200px; margin: 0 auto; }
+        .gallery-section h2 { text-align: center; font-size: 2.2rem; margin-bottom: 10px; color: #1a252f; }
+        .gallery-section p.subtitle { text-align: center; color: #666; margin-bottom: 40px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08); transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); }
+        .card-img-container { width: 100%; height: 200px; background-color: #eef2f5; display: flex; align-items: center; justify-content: center; padding: 15px; }
+        .card-img-container svg { width: 100%; height: 100%; max-height: 170px; }
+        
+        .card-content { padding: 20px; }
+        .card-content h3 { color: #1a252f; margin-bottom: 10px; font-size: 1.25rem; }
+        .card-content p { font-size: 0.95rem; color: #555; margin-bottom: 15px; }
+        .card-btn { display: inline-block; color: #25d366; font-weight: bold; text-decoration: none; }
 
-        footer {
-            background-color: #1a252f;
-            color: white;
-            padding: 40px 5% 20px;
-            text-align: center;
-        }
-        footer a {
-            color: #25d366;
-            text-decoration: none;
-            font-weight: bold;
-        }
+        footer { background-color: #1a252f; color: white; padding: 40px 5% 20px; text-align: center; }
+        footer a { color: #25d366; text-decoration: none; font-weight: bold; }
 
-        /* Botón Flotante Titilante de WhatsApp */
-        .whatsapp-float {
-            position: fixed;
-            width: 75px;
-            height: 75px;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            animation: pulse-whatsapp 1.8s infinite;
-        }
-
-        @keyframes pulse-whatsapp {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { transform: scale(1.1); box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
+        .whatsapp-float { position: fixed; width: 75px; height: 75px; bottom: 30px; right: 30px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); z-index: 9999; display: flex; align-items: center; justify-content: center; text-decoration: none; animation: pulse-whatsapp 1.8s infinite; }
+        @keyframes pulse-whatsapp { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.1); box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
     </style>
 </head>
 <body>
@@ -189,54 +65,165 @@
     </section>
 
     <section class="gallery-section" id="catalogo">
-        <h2>Nuestros Productos y Soluciones</h2>
-        <p class="subtitle">Estructuras diseñadas con materiales de alta resistencia e impermeabilidad</p>
+        <h2>Catálogo de Productos y Estructuras (10 Soluciones)</h2>
+        <p class="subtitle">Diseño, confección y montaje profesional con materiales de alta resistencia</p>
 
         <div class="grid">
+
+            <!-- 1. Carpas Industriales -->
             <div class="card">
-                <img src="carpa-industrial.jpg" alt="Carpas Industriales y Bodegas de Lona">
+                <div class="card-img-container">
+                    <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 100 L100 30 L190 100 Z" fill="#2c3e50" stroke="#f39c12" stroke-width="4"/>
+                        <path d="M25 100 L100 45 L175 100" fill="#34495e"/>
+                        <rect x="80" y="70" width="40" height="30" fill="#f39c12"/>
+                    </svg>
+                </div>
                 <div class="card-content">
-                    <h3>Carpas Industriales</h3>
-                    <p>Bodegas temporales y hangares de gran escala fabricados con lona impermeabilizada y estructuras de acero para almacenamiento masivo.</p>
-                    <a href="https://wa.me/573142035325?text=Cotizar%20Carpa%20Industrial" class="card-btn" target="_blank">Cotizar por WhatsApp →</a>
+                    <h3>1. Carpas Industriales</h3>
+                    <p>Estructuras de gran escala para almacenamiento y bodega temporal de mercancías.</p>
+                    <a href="https://wa.me/573142035325?text=Cotizar%20Carpas%20Industriales" class="card-btn" target="_blank">Cotizar por WhatsApp →</a>
                 </div>
             </div>
 
+            <!-- 2. Membranas Arquitectónicas -->
             <div class="card">
-                <img src="membrana.jpg" alt="Membranas Arquitectónicas y Tensoestructuras">
+                <div class="card-img-container">
+                    <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 90 Q 100 10 180 90 Q 100 60 20 90" fill="#2980b9" stroke="#3498db" stroke-width="3"/>
+                        <line x1="20" y1="90" x2="20" y2="110" stroke="#7f8c8d" stroke-width="5"/>
+                        <line x1="180" y1="90" x2="180" y2="110" stroke="#7f8c8d" stroke-width="5"/>
+                    </svg>
+                </div>
                 <div class="card-content">
-                    <h3>Membranas Arquitectónicas</h3>
-                    <p>Cubiertas tensadas de diseño vanguardista con protección UV para plazoletas, centros comerciales y espacios corporativos.</p>
+                    <h3>2. Membranas Arquitectónicas</h3>
+                    <p>Cubiertas tensionadas de alto impacto estético y protección UV para espacios abiertos.</p>
                     <a href="https://wa.me/573142035325?text=Cotizar%20Membrana%20Arquitectonica" class="card-btn" target="_blank">Cotizar por WhatsApp →</a>
                 </div>
             </div>
 
+            <!-- 3. Hangares Temporales -->
             <div class="card">
-                <img src="eventos.jpg" alt="Carpas Bogotá para Eventos y Logística">
+                <div class="card-img-container">
+                    <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 100 Q 100 20 190 100 Z" fill="#27ae60" stroke="#2ecc71" stroke-width="4"/>
+                        <line x1="10" y1="100" x2="190" y2="100" stroke="#7f8c8d" stroke-width="4"/>
+                    </svg>
+                </div>
                 <div class="card-content">
-                    <h3>Carpas Bogotá (Eventos)</h3>
-                    <p>Estructuras modulares tipo hangar o piramidal ideales para eventos masivos, ferias comerciales y logística temporal en Bogotá.</p>
-                    <a href="https://wa.me/573142035325?text=Cotizar%20Carpa%20Eventos" class="card-btn" target="_blank">Cotizar por WhatsApp →</a>
+                    <h3>3. Hangares Temporales</h3>
+                    <p>Cubrimientos curva tipo hangar sin columnas intermedias para logística masiva.</p>
+                    <a href="https://wa.me/573142035325?text=Cotizar%20Hangares%20Temporales" class="card-btn" target="_blank">Cotizar por WhatsApp →</a>
                 </div>
             </div>
 
+            <!-- 4. Carpas Tipo Hangar para Eventos -->
             <div class="card">
-                <img src="toldo.jpg" alt="Toldos Retráctiles y Comerciales">
+                <div class="card-img-container">
+                    <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="20,100 100,20 180,100" fill="#e67e22"/>
+                        <line x1="100" y1="20" x2="100" y2="100" stroke="#fff" stroke-width="2" stroke-dasharray="4"/>
+                    </svg>
+                </div>
                 <div class="card-content">
-                    <h3>Toldos Comerciales</h3>
-                    <p>Toldos fijos y retráctiles para fachadas de comercios, restaurantes y residencias. Protección solar e impermeable elegante.</p>
-                    <a href="https://wa.me/573142035325?text=Cotizar%20Toldos" class="card-btn" target="_blank">Cotizar por WhatsApp →</a>
+                    <h3>4. Carpas para Eventos (Bogotá)</h3>
+                    <p>Estructuras elegantes tipo pirámide o hangar para ferias, eventos corporativos y fiestas.</p>
+                    <a href="https://wa.me/573142035325?text=Cotizar%20Carpas%20Eventos" class="card-btn" target="_blank">Cotizar por WhatsApp →</a>
                 </div>
             </div>
 
+            <!-- 5. Toldos Retráctiles -->
             <div class="card">
-                <img src="pergola.jpg" alt="Pérgolas con Cubiertas Textiles">
+                <div class="card-img-container">
+                    <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 40 L180 40 L160 80 L20 60 Z" fill="#c0392b"/>
+                        <rect x="20" y="30" width="160" height="10" fill="#7f8c8d"/>
+                    </svg>
+                </div>
                 <div class="card-content">
-                    <h3>Pérgolas y Cubiertas</h3>
-                    <p>Estructuras fijas en aluminio o madera con sistemas de cubiertas de lona o policarbonato para terrazas y patios.</p>
-                    <a href="https://wa.me/573142035325?text=Cotizar%20Pergola" class="card-btn" target="_blank">Cotizar por WhatsApp →</a>
+                    <h3>5. Toldos Retráctiles</h3>
+                    <p>Sistemas desplegables de protección solar e impermeable para locales y terrazas.</p>
+                    <a href="https://wa.me/573142035325?text=Cotizar%20Toldos%20Retractiles" class="card-btn" target="_blank">Cotizar por WhatsApp →</a>
                 </div>
             </div>
+
+            <!-- 6. Pérgolas con Cubierta Textil -->
+            <div class="card">
+                <div class="card-img-container">
+                    <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="30" y="30" width="140" height="15" fill="#d35400"/>
+                        <rect x="40" y="45" width="12" height="65" fill="#7f8c8d"/>
+                        <rect x="148" y="45" width="12" height="65" fill="#7f8c8d"/>
+                        <line x1="30" y1="35" x2="170" y2="35" stroke="#f1c40f" stroke-width="6"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>6. Pérgolas y Cubiertas</h3>
+                    <p>Estructuras fijas en aluminio o madera con sistemas de lona para patios y jardines.</p>
+                    <a href="https://wa.me/573142035325?text=Cotizar%20Pergolas" class="card-btn" target="_blank">Cotizar por WhatsApp →</a>
+                </div>
+            </div>
+
+            <!-- 7. Bodegas de Lona y PVC -->
+            <div class="card">
+                <div class="card-img-container">
+                    <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="20" y="50" width="160" height="55" fill="#16a085"/>
+                        <polygon points="20,50 100,20 180,50" fill="#1abc9c"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>7. Bodegas de Lona y PVC</h3>
+                    <p>Soluciones desmontables de almacenamiento rápido con lona impermeable de alta tenacidad.</p>
+                    <a href="https://wa.me/573142035325?text=Cotizar%20Bodegas%20Lona" class="card-btn" target="_blank">Cotizar por WhatsApp →</a>
+                </div>
+            </div>
+
+            <!-- 8. Parasoles Institucionales -->
+            <div class="card">
+                <div class="card-img-container">
+                    <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M40 60 Q 100 20 160 60 Z" fill="#8e44ad"/>
+                        <line x1="100" y1="60" x2="100" y2="110" stroke="#7f8c8d" stroke-width="6"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>8. Parasoles Gigantes</h3>
+                    <p>Parasoles reforzados e impermeables para restaurantes, clubes y zonas al aire libre.</p>
+                    <a href="https://wa.me/573142035325?text=Cotizar%20Parasoles" class="card-btn" target="_blank">Cotizar por WhatsApp →</a>
+                </div>
+            </div>
+
+            <!-- 9. Carpas Pagoda -->
+            <div class="card">
+                <div class="card-img-container">
+                    <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30 100 L100 15 L170 100 Z" fill="#f1c40f"/>
+                        <path d="M100 15 Q 80 60 30 100 Q 120 80 170 100 Z" fill="#f39c12"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>9. Carpas Tipo Pagoda</h3>
+                    <p>Diseño estilizado con picos elevados para stands comerciales, ferias y exhibiciones.</p>
+                    <a href="https://wa.me/573142035325?text=Cotizar%20Carpas%20Pagoda" class="card-btn" target="_blank">Cotizar por WhatsApp →</a>
+                </div>
+            </div>
+
+            <!-- 10. Cubrimientos a Medida -->
+            <div class="card">
+                <div class="card-img-container">
+                    <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="25" y="35" width="150" height="70" fill="none" stroke="#2980b9" stroke-width="4" stroke-dasharray="6"/>
+                        <polygon points="25,35 100,10 175,35" fill="none" stroke="#e74c3c" stroke-width="4"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>10. Cubrimientos Especiales</h3>
+                    <p>Diseño y confección de cubiertas técnicas a medida según la geometría de su proyecto.</p>
+                    <a href="https://wa.me/573142035325?text=Cotizar%20Estructura%20Especial" class="card-btn" target="_blank">Cotizar por WhatsApp →</a>
+                </div>
+            </div>
+
         </div>
     </section>
 
